@@ -1,1 +1,171 @@
-Coming sooooooooooooon!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | Nexora</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-deep: #020617;
+  --bg-surface: #0f172a;
+  --accent-blue: #3b82f6;
+  --text-primary: #f8fafc;
+  --text-secondary: #64748b;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(59,130,246,0.08), transparent 60%), var(--bg-deep);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--bg-surface);
+  padding: 3rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.3rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background: #0b1220;
+  color: white;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--accent-blue);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  box-shadow: 0 4px 20px rgba(59,130,246,0.3);
+}
+
+button:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.footer-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.footer-link a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo"><img src="https://avatars.githubusercontent.com/u/263523948?s=70&v=4"></img></div>
+
+  <h1>Create Account</h1>
+  <div class="subtitle">One identity for the entire Nexora network.</div>
+
+<form onsubmit="event.preventDefault(); window.location.href='/welcome';">
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" placeholder="Choose a username" required>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" placeholder="Create a strong password" required>
+    </div>
+
+    <div class="input-group">
+      <label>Confirm Password</label>
+      <input type="password" placeholder="Confirm your password" required>
+    </div>
+
+    <button type="submit">Create Nexora Account</button>
+  </form>
+
+  <div class="footer-link">
+    Already have an account? <a href="/login">Sign in</a>
+  </div>
+</div>
+
+</body>
+</html>
