@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Nexora</title>
+  <script src="https://kit.fontawesome.com/eeb01edac2.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-deep: #020617;
+  --bg-surface: #0f172a;
+  --accent-blue: #3b82f6;
+  --text-primary: #f8fafc;
+  --text-secondary: #64748b;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(59,130,246,0.08), transparent 60%), var(--bg-deep);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--bg-surface);
+  padding: 3rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-node {
+  padding: 1rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.project-node:hover {
+  border-color: var(--accent-blue);
+  background: rgba(59,130,246,0.03);
+  transform: translateY(-2px);
+}
+
+.node-name {
+  font-weight: 600;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  border-radius: 14px;
+  border: none;
+  background: var(--accent-blue);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 20px rgba(59,130,246,0.3);
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo"><img src="https://avatars.githubusercontent.com/u/263523948?s=70&v=4" alt="Nexora logo"></div>
+
+  <h1>Welcome to Nexora!</h1>
+  <div class="subtitle">
+    One account. Every project. Seamless access across the NothingButTyler network. To get started, click on "Go to Dashboard".
+  </div>
+
+  <div class="project-grid">
+    <div class="project-node"><span class="node-name">Valodoka Games</span></div>
+    <div class="project-node"><span class="node-name">NothingButTyler+</span></div>
+    <div class="project-node"><span class="node-name">SocialConnect</span></div>
+    <div class="project-node"><span class="node-name">School Apps Redirector</span></div>
+    <div class="project-node"><span class="node-name">WiFly</span></div>
+  </div>
+
+  <button class="btn-primary" onclick="window.location.href='/dashboard'">Go to Dashboard <i class="fa-solid fa-arrow-right"></i></button>
+</div>
+  
+  <script>
+  if (!localStorage.getItem('nexora-just-signed-up')) {
+    // Not a new signup, redirect them
+    window.location.href = '/login';
+  } else {
+    // Clear the flag so refresh won't keep showing welcome
+    localStorage.removeItem('nexora-just-signed-up');
+  }
+</script>
+
+</body>
+</html>
