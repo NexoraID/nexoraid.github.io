@@ -1,9 +1,220 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Coming Soon | Nexora</title>
-  </head>
-  <body style="background-color: black;color: white;'>
-    <center><p>Coming soon!</p></center>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log Into All NothingButTyler Apps with One App | Nexora</title>
+  <script src="https://kit.fontawesome.com/eeb01edac2.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #020617;
+  --bg-surface: #0f172a;
+  --accent-blue: #3b82f6;
+  --text-primary: #f8fafc;
+  --text-secondary: #64748b;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Subtle background glow */
+body::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 10;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  z-index: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.3));
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Unified Button Design */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 6rem;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+}
+
+.btn-primary:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: white;
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.network-title {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-node {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.project-node:hover {
+  border-color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.03);
+}
+
+.node-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+footer {
+  margin-top: auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #334155;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .btn-group { flex-direction: column; }
+  h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <img src="https://avatars.githubusercontent.com/u/263523948?s=200&v=4" alt="Nexora" class="logo">
+  </nav>
+
+  <main class="container">
+    <h1>Welcome to Nexora</h1>
+    <p class="hero-subtitle">
+      One secure identity for the entire NothingButTyler network.
+Sign in once. Access everything.
+    </p>
+
+    <div class="btn-group">
+      <a href="/create" class="btn btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i> Create Nexora Account</a>
+      <a href="/login" class="btn btn-secondary"><i class="fa-solid fa-user"></i> Log In</a>
+    </div>
+
+    <section class="network-section">
+      <div class="network-title">The Nexora Network</div>
+      <div class="grid">
+        <div class="project-node">
+          <span class="node-name">Valodoka Games</span>
+        </div>
+        <div class="project-node">
+          <span class="node-name">NothingButTyler+</span>
+        </div>
+        <div class="project-node">
+          <span class="node-name">SocialConnect</span>
+        </div>
+        <div class="project-node">
+          <span class="node-name">School Apps Redirector</span>
+        </div>
+        <div class="project-node">
+          <span class="node-name">WiFly</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Copyright © 2026 Nexora. Powered by NothingButTyler.
+  </footer>
+
+</body>
 </html>
